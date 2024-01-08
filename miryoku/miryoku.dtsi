@@ -111,6 +111,7 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
     T_MACRO2(T_LAYERS, b, mp, &kp Q, &kp LC(Q), &kp N3)
     T_MACRO2(T_LAYERS, b, ir, &kp C, &kp LC(C), &kp N1)
   };
+};
 
 
 #undef T_MACRO
