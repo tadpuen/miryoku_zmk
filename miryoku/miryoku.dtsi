@@ -34,7 +34,7 @@ NAME {\
   timeout-ms = <T_MACRO_TIMEOUT>; \
 };\
 
-#define T_MACRO1(LAYER, H, POSITION, BINDING_I, BINDING_O) \
+#define T_MACRO1(LAYER, POSITION, BINDING_I, BINDING_O) \
 TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) inl, BINDING_I)\
 TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) outl, BINDING_O)\
 TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, r) inl, BINDING_I)\
