@@ -7,8 +7,8 @@
 
 #define MIRYOKU_ALTERNATIVES_TAPIO \
 U_NA, U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA, \
-&kp R,             &kp S,             &kp N,             &kp I,             U_NA,             U_NA,             &kp I,             &kp N,             &kp S,             &kp P,             \
-&kp A,             &kp O,             &kp T,             &kp E,             U_NA,             U_NA,             &kp E,             &kp T,             &kp O,             &kp P,             \
+&kp R,             &kp S,             &kp N,             &kp I,             U_NA,             U_NA,             &kp I,             &kp N,             &kp S,             &kp R,             \
+&kp A,             &kp O,             &kp T,             &kp E,             U_NA,             U_NA,             &kp E,             &kp T,             &kp O,             &kp A,             \
 U_NP,              U_NP,              &to U_BASE,              &kp SPACE, &kp BSPC,  &kp BSPC, &kp SPACE, &to U_BASE,U_NP,              U_NP
 
 
