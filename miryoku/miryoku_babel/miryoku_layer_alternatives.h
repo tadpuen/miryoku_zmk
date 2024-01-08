@@ -5,6 +5,12 @@
 
 #pragma once
 
+#define MIRYOKU_ALTERNATIVES_TAPIO \
+U_NA, U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA, \
+&kp R,             &kp S,             &kp N,             &kp I,             U_NA,             U_NA,             &kp I,             &kp N,             &kp S,             &kp P,             \
+&kp A,             &kp O,             &kp T,             &kp E,             U_NA,             U_NA,             &kp E,             &kp T,             &kp O,             &kp P,             \
+U_NP,              U_NP,              &to U_BASE,              SPACE, BSPC,  BSPC, SPACE, &to U_BASE,U_NP,              U_NP
+
 
 #define MIRYOKU_ALTERNATIVES_BASE_AZERTY_FLIP \
 &kp A,             &kp Z,             &kp E,             &kp R,             &kp T,             &kp Y,             &kp U,             &kp I,             &kp O,             &kp P,             \
@@ -275,7 +281,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 #define MIRYOKU_ALTERNATIVES_NAV \
 U_BOOT,            &u_to_U_TAP,       &u_to_U_EXTRA,     &u_to_U_BASE,      U_NA,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
 &kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         U_NA,              &u_caps_word,      &kp LEFT,          &kp DOWN,          &kp UP,            &kp RIGHT,         \
-U_NA,              &kp RALT,          &u_to_U_NUM,       &u_to_U_NAV,       U_NA,              &kp INS,           &kp HOME,          &kp PG_DN,         &kp PG_UP,         &kp END,           \
+U_NA,              &kp RALT,          &u_to_U_NUM,       &u_to_U_NAV,       &u_to_U_TAPIO,              &kp INS,           &kp HOME,          &kp PG_DN,         &kp PG_UP,         &kp END,           \
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              &kp RET,           &kp BSPC,          &kp DEL,           U_NP,              U_NP
 
 
@@ -350,7 +356,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 #define MIRYOKU_ALTERNATIVES_NUM \
 &kp LBKT,          &kp N7,            &kp N8,            &kp N9,            &kp RBKT,          U_NA,              &u_to_U_BASE,      &u_to_U_EXTRA,     &u_to_U_TAP,       U_BOOT,            \
 &kp SEMI,          &kp N4,            &kp N5,            &kp N6,            &kp EQUAL,         U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
-&kp GRAVE,         &kp N1,            &kp N2,            &kp N3,            &kp BSLH,          U_NA,              &u_to_U_NUM,       &u_to_U_NAV,       &kp RALT,          U_NA,              \
+&kp GRAVE,         &kp N1,            &kp N2,            &kp N3,            &kp BSLH,          &u_to_U_TAPIO,              &u_to_U_NUM,       &u_to_U_NAV,       &kp RALT,          U_NA,              \
 U_NP,              U_NP,              &kp DOT,           &kp N0,            &kp MINUS,         U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
 
