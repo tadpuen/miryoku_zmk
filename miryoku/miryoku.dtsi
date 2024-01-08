@@ -86,7 +86,7 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
 #define ir(T,S) S ## T ## i S ## T ## r
 #define mp(T,S) S ## T ## m S ## T ## p
 
-\ {
+/ {
   combos {
     compatible = "zmk,combos";
     T_MACRO1(T_LAYERS, ti, &kp LC(I), &kp LPAR)
