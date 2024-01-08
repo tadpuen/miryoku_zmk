@@ -9,7 +9,7 @@
 U_NA, U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA,U_NA, \
 &kp R,             &kp S,             &kp N,             &kp I,             U_NA,             U_NA,             &kp I,             &kp N,             &kp S,             &kp P,             \
 &kp A,             &kp O,             &kp T,             &kp E,             U_NA,             U_NA,             &kp E,             &kp T,             &kp O,             &kp P,             \
-U_NP,              U_NP,              &to U_BASE,              SPACE, BSPC,  BSPC, SPACE, &to U_BASE,U_NP,              U_NP
+U_NP,              U_NP,              &to U_BASE,              &kp SPACE, &kp BSPC,  &kp BSPC, &kp SPACE, &to U_BASE,U_NP,              U_NP
 
 
 #define MIRYOKU_ALTERNATIVES_BASE_AZERTY_FLIP \
