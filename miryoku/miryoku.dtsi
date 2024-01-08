@@ -25,7 +25,7 @@ MIRYOKU_LAYER_LIST
   };
 };
 
-#define T_MACRO_TIMEOUT 200
+#define T_MACRO_TIMEOUT 75
 #define TT_MACRO(LAYER, NAME, POSITION, BINDING) \
 NAME {\
   layers = <LAYER>; \
