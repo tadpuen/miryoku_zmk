@@ -25,6 +25,97 @@ MIRYOKU_LAYER_LIST
   };
 };
 
+#define T_MACRO_TIMEOUT 200
+#define TT_MACRO(LAYER, NAME, POSITION, BINDING) \
+NAME {\
+  layers = <LAYER>; \
+  key-positions = <POSITION>; \
+  bindings = <BINDING>; \
+  timeout-ms = <T_MACRO_TIMEOUT>; \
+};\
+
+#define T_MACRO1(LAYER, H, POSITION, BINDING_I, BINDING_O) \
+TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) inl, BINDING_I)\
+TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) outl, BINDING_O)\
+TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, r) inl, BINDING_I)\
+TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, r) outl, BINDING_O)
+
+#define T_MACRO2(LAYER, H, POSITION, BINDING, BINDING_I, BINDING_O) \
+TT_MACRO(LAYER, tapiocombos_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, H, l), BINDING)\
+TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, H, l) inl, BINDING_I)\
+TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, H, l) outl, BINDING_O)\
+TT_MACRO(LAYER, tapiocombos_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r), BINDING)\
+TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r) inl, BINDING_I)\
+TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r) outl, BINDING_O)
+
+#define rti 16
+#define rtm 17
+#define rtr 18
+#define rtp 19
+#define rbi 27
+#define rbm 28
+#define rbr 29
+#define rbp 30
+#define lti 13
+#define ltm 12
+#define ltr 11
+#define ltp 10
+#define lbi 24
+#define lbm 23
+#define lbr 22
+#define lbp 31
+
+#define outl 32 
+#define outr 35 
+#define inl 33 
+#define inr 36 
+
+#define ti(S) S ## ti
+#define tm(S) S ## tm
+#define tr(S) S ## tr
+#define tp(S) S ## tp
+#define bi(S) S ## bi
+#define bm(S) S ## bm
+#define br(S) S ## br
+#define bp(S) S ## bp
+
+#define im(T,S) S ## T ## i S ## T ## m
+#define rp(T,S) S ## T ## r S ## T ## p
+#define ip(T,S) S ## T ## i S ## T ## p
+#define mr(T,S) S ## T ## m S ## T ## r
+#define ir(T,S) S ## T ## i S ## T ## r
+#define mp(T,S) S ## T ## m S ## T ## p
+
+\ {
+  combos {
+    compatible = "zmk,combos";
+    T_MACRO1(T_LAYERS, ti, &kp LC(I), &kp LPAR)
+    T_MACRO1(T_LAYERS, tm, &kp LC(N), &kp LBKT)
+    T_MACRO1(T_LAYERS, tr, &kp LC(S), &kp LBRC)
+    T_MACRO1(T_LAYERS, tp, &kp LC(R), &kp GT)
+    T_MACRO1(T_LAYERS, bi, &kp LC(E), &kp RPAR)
+    T_MACRO1(T_LAYERS, bm, &kp LC(T), &kp RBKT)
+    T_MACRO1(T_LAYERS, br, &kp LC(O), &kp RBRC)
+    T_MACRO1(T_LAYERS, bp, &kp LC(A), &kp LT)
+
+    T_MACRO2(T_LAYERS, t, rp, &kp B, &kp LC(B), &kp N9)
+    T_MACRO2(T_LAYERS, t, im, &kp Y, &kp LC(Y), &kp N5)
+    T_MACRO2(T_LAYERS, t, mr, &kp P, &kp LC(P), &kp N7)
+    T_MACRO2(T_LAYERS, t, ip, &kp G, &kp LC(G), &kp HASH)
+    T_MACRO2(T_LAYERS, t, mp, &kp Z, &kp LC(Z), &kp N8)
+    T_MACRO2(T_LAYERS, t, ir, &kp F, &kp LC(F), &kp N6)
+    T_MACRO2(T_LAYERS, b, rp, &kp L, &kp LC(L), &kp N4)
+    T_MACRO2(T_LAYERS, b, im, &kp H, &kp LC(H), &kp N0)
+    T_MACRO2(T_LAYERS, b, mr, &kp U, &kp LC(U), &kp N2)
+    T_MACRO2(T_LAYERS, b, ip, &kp D, &kp LC(D), &kp AT)
+    T_MACRO2(T_LAYERS, b, mp, &kp Q, &kp LC(Q), &kp N3)
+    T_MACRO2(T_LAYERS, b, ir, &kp C, &kp LC(C), &kp N1)
+  };
+
+
+#undef T_MACRO
+
+
 #include "miryoku_shift_functions.dtsi"
 
 #include "miryoku_double_tap_guard.dtsi"
