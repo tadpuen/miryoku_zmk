@@ -43,7 +43,7 @@ TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L##i, l##P l##P2
 TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L##o, l##P l##P2 l##P3  outr, BO) 
 
 
-#define v(layers, U, B, BI, BO) \
+#define VERT(layers, U, B, BI, BO) \
 TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U, lt##U lb##U, B) \
 TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##i, lt##U lb##U inl, BI) \
 TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##o, lt##U lb##U outl, BO) \
@@ -137,10 +137,10 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
     T_MACRO2(T_LAYERS, b, mp, &kp Q, &kp LS(Q), &kp N3)
     T_MACRO2(T_LAYERS, b, ir, &kp C, &kp LS(C), &kp N1)
 
-    v(T_LAYERS, i, &sk LSHFT, &kp LEFT, &kp HOME)
-    v(T_LAYERS, m, &sk LCTRL, &kp DOWN, &kp PG_DOWN)
-    v(T_LAYERS, r, &sk LALT, &kp UP, &kp PG_UP)
-    v(T_LAYERS, p, &sk LGUI, &kp RIGHT, &kp END)
+    VERT(T_LAYERS, i, &sk LSHFT, &kp LEFT, &kp HOME)
+    VERT(T_LAYERS, m, &sk LCTRL, &kp DOWN, &kp PG_DOWN)
+    VERT(T_LAYERS, r, &sk LALT, &kp UP, &kp PG_UP)
+    VERT(T_LAYERS, p, &sk LGUI, &kp RIGHT, &kp END)
 
     T_MACRO3(T_LAYERS, ti, tm, tr, &kp TAB, &kp DEL, &none) // fn - another layer?
     T_MACRO3(T_LAYERS, bi, bm, br, &kp ENTR, &kp ESC, &none) // agr?
