@@ -34,7 +34,7 @@ NAME {\
   timeout-ms = <T_MACRO_TIMEOUT>; \
 };\
 
-#define T_MARCO3(layers, P, P2,P3, B, BI, BO)\
+#define T_MACRO3(layers, P, P2,P3, B, BI, BO)\
 TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3, l##P l##P2 l##P3 , B) \
 TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##L##i, lt##P l##P2 l##P3 inl, BI) \
 TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##L##o, l##P l##P2 l##P3  outl, BO) \
