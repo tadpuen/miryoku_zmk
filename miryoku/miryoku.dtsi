@@ -45,8 +45,8 @@ TT_MACRO(LAYER, tapiocombos_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## l, U_MA
 TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, H, l) inl, BINDING_I)\
 TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, H, l) outl, BINDING_O)\
 TT_MACRO(LAYER, tapiocombos_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r), BINDING)\
-TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r) inl, BINDING_I)\
-TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r) outl, BINDING_O)
+TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r) inr, BINDING_I)\
+TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, H, r) outr, BINDING_O)
 
 #define rti 16
 #define rtm 17
