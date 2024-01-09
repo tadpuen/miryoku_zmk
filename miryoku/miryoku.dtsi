@@ -44,12 +44,12 @@ TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L##o, l##P l##P2
 
 
 #define v(layers, U, B, BI, BO) \
-TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##L, lt##U lb##U, B) \
-TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##L##i, lt##U lb##U inl, BI) \
-TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##L##o, lt##U lb##U outl, BO) \
-TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##L, rt##U rb##U, B) \
-TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##L##i, rt##U rb##U inr, BI) \
-TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##L##o, rt##U rb##U outr, BO) 
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U, lt##U lb##U, B) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##i, lt##U lb##U inl, BI) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##o, lt##U lb##U outl, BO) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U, rt##U rb##U, B) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##i, rt##U rb##U inr, BI) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##o, rt##U rb##U outr, BO) 
 
 #define d(layers, U, L, B, BI, BO) \
 TT_MACRO(layers, tapiocombos_ ## layers ## diag_l_ ## U##L, lt##U lb##L, B) \
