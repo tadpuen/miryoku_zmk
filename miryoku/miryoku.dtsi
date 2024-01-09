@@ -37,8 +37,8 @@ NAME {\
 #define T_MACRO1(LAYER, POSITION, BINDING_I, BINDING_O) \
 TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) inl, BINDING_I)\
 TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) outl, BINDING_O)\
-TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, r) inl, BINDING_I)\
-TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, r) outl, BINDING_O)
+TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, r) inr, BINDING_I)\
+TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## POSITION ## _ ## r, U_MACRO_VA_ARGS(POSITION, r) outr, BINDING_O)
 
 #define T_MACRO2(LAYER, H, POSITION, BINDING, BINDING_I, BINDING_O) \
 TT_MACRO(LAYER, tapiocombos_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, H, l), BINDING)\
@@ -65,10 +65,10 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
 #define lbr 22
 #define lbp 21
 
-#define outl 35 
-#define outr 32 
-#define inl 36 
-#define inr 33 
+#define outr 35 
+#define outl 32 
+#define inr 36 
+#define inl 33 
 
 #define ti(S) S ## ti
 #define tm(S) S ## tm
