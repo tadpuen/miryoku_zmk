@@ -137,7 +137,7 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
     T_MACRO2(T_LAYERS, b, mp, &kp Q, &kp LS(Q), &kp N3)
     T_MACRO2(T_LAYERS, b, ir, &kp C, &kp LS(C), &kp N1)
 
-    //VERT(T_LAYERS, i, &sk LSHFT, &kp LEFT, &kp HOME)
+    VERT(T_LAYERS, i, &sk LSHFT, &kp LEFT, &kp HOME)
     //VERT(T_LAYERS, m, &sk LCTRL, &kp DOWN, &kp PG_DOWN)
     //VERT(T_LAYERS, r, &sk LALT, &kp UP, &kp PG_UP)
     //VERT(T_LAYERS, p, &sk LGUI, &kp RIGHT, &kp END)
