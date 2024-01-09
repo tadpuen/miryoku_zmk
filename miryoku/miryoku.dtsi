@@ -34,6 +34,31 @@ NAME {\
   timeout-ms = <T_MACRO_TIMEOUT>; \
 };\
 
+#define TT_MARCO3(layers, P, P2,P3, B, BI, BO)\
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3, l##P l##P2 l##P3 , B) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##L##i, lt##P l##P2 l##P3 inl, BI) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##L##o, l##P l##P2 l##P3  outl, BO) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L, l##P l##P2 l##P3 , B) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L##i, l##P l##P2 l##P3  inr, BI) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L##o, l##P l##P2 l##P3  outr, BO) 
+
+
+#define v(layers, U, B, BI, BO) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##L, lt##U lb##U, B) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##L##i, lt##U lb##U inl, BI) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_l_ ## U##L##o, lt##U lb##U outl, BO) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##L, rt##U rb##U, B) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##L##i, rt##U rb##U inr, BI) \
+TT_MACRO(layers, tapiocombos_vert ## layers ## diag_r_ ## U##L##o, rt##U rb##U outr, BO) 
+
+#define d(layers, U, L, B, BI, BO) \
+TT_MACRO(layers, tapiocombos_ ## layers ## diag_l_ ## U##L, lt##U lb##L, B) \
+TT_MACRO(layers, tapiocombos_ ## layers ## diag_l_ ## U##L##i, lt##U lb##L inl, BI) \
+TT_MACRO(layers, tapiocombos_ ## layers ## diag_l_ ## U##L##o, lt##U lb##L outl, BO) \
+TT_MACRO(layers, tapiocombos_ ## layers ## diag_r_ ## U##L, rt##U rb##L, B) \
+TT_MACRO(layers, tapiocombos_ ## layers ## diag_r_ ## U##L##i, rt##U rb##L inr, BI) \
+TT_MACRO(layers, tapiocombos_ ## layers ## diag_r_ ## U##L##o, rt##U rb##L outr, BO) 
+
 #define T_MACRO1(LAYER, POSITION, BINDING_I, BINDING_O) \
 TT_MACRO(LAYER, tapiocombos_I_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) inl, BINDING_I)\
 TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## POSITION ## _ ## l, U_MACRO_VA_ARGS(POSITION, l) outl, BINDING_O)\
@@ -86,6 +111,7 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
 #define ir(T,S) S ## T ## i S ## T ## r
 #define mp(T,S) S ## T ## m S ## T ## p
 
+
 / {
   combos {
     compatible = "zmk,combos";
@@ -110,6 +136,28 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
     T_MACRO2(T_LAYERS, b, ip, &kp D, &kp LS(D), &kp AT)
     T_MACRO2(T_LAYERS, b, mp, &kp Q, &kp LS(Q), &kp N3)
     T_MACRO2(T_LAYERS, b, ir, &kp C, &kp LS(C), &kp N1)
+
+    v(T_LAYERS, i, &sk LSHFT, &kp LEFT, &kp HOME)
+    v(T_LAYERS, m, &sk LCTRL, &kp DOWN, &kp PG_DOWN)
+    v(T_LAYERS, r, &sk LALT, &kp UP, &kp PG_UP)
+    v(T_LAYERS, p, &sk LGUI, &kp RIGHT, &kp END)
+
+    T_MACRO3(T_LAYERS, ti tm tr, &kp TAB, &kp DEL, &none) // fn - another layer?
+    T_MACRO3(T_LAYERS, bi bm br, &kp ENTR, &kp ESC, &none) // agr?
+
+    d(T_LAYERS, i,r, &kp K,&kp LS(K), &kp PLUS)
+    d(T_LAYERS, r,i, &kp V,&kp LS(V), &kp STAR)
+    d(T_LAYERS, m,p, &kp J,&kp LS(J), &kp EQUAL)
+    d(T_LAYERS, p,m, &kp X,&kp LS(X), &kp CARET)
+    d(T_LAYERS, i,p, &kp W,&kp LS(W), &kp AMPS)
+    d(T_LAYERS, p,i, &kp M,&kp LS(M), &kp DLLR)
+    d(T_LAYERS, m,r, &kp MINUS,&kp LS(MINUS), &kp PRCNT)
+    d(T_LAYERS, r,m, &kp SLASH,&kp BACKSLASH, &kp PIPE)
+    d(T_LAYERS, i,m, &kp QMARK,&kp EXCL, &none)
+    d(T_LAYERS, m,i, &kp COMMA,&kp PERIOD, &kp TILDE)
+    d(T_LAYERS, r,p, &kp APOS,&kp DQT, &kp GRAVE)
+    d(T_LAYERS, p,r, &kp SEMI,&kp COLON, &none)
+
   };
 };
 
