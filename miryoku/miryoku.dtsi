@@ -36,11 +36,11 @@ NAME {\
 
 #define T_MACRO3(layers, P, P2,P3, B, BI, BO)\
 TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3, l##P l##P2 l##P3 , B) \
-TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##L##i, l##P l##P2 l##P3 inl, BI) \
-TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##L##o, l##P l##P2 l##P3  outl, BO) \
-TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L, l##P l##P2 l##P3 , B) \
-TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L##i, l##P l##P2 l##P3  inr, BI) \
-TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##L##o, l##P l##P2 l##P3  outr, BO) 
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##i, l##P l##P2 l##P3 inl, BI) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_l ## P##P2##P3##o, l##P l##P2 l##P3 outl, BO) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3, r##P r##P2 r##P3 , B) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##i, r##P r##P2 r##P3 inr, BI) \
+TT_MACRO(layers, tapiocombos_ ## layers ## trip_r ## P##P2##P3##o, r##P r##P2 r##P3 outr, BO) 
 
 
 #define VERT(layers, U, B, BI, BO) \
