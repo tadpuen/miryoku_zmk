@@ -65,10 +65,10 @@ TT_MACRO(LAYER, tapiocombos_O_ ## LAYER ## _ ## H ## _ ## POSITION ## _ ## r, U_
 #define lbr 22
 #define lbp 21
 
-#define outl 32 
-#define outr 35 
-#define inl 33 
-#define inr 36 
+#define outl 35 
+#define outr 32 
+#define inl 36 
+#define inr 33 
 
 #define ti(S) S ## ti
 #define tm(S) S ## tm
