@@ -13,4 +13,4 @@ jobs:
     with:
       board: '["seeeduino_xiao_ble"]'
       shield: '["totem_left", "totem_right"]'
-      kconfig: '["CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY=64\nCONFIG_ZMK_BLE_PASSKEY_ENTRY=y\nCONFIG_ZMK_KEYBOARD_NAME=\"totem white\"\n"]'
+      kconfig: '["CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY=64","CONFIG_ZMK_BLE_PASSKEY_ENTRY=y", "CONFIG_ZMK_KEYBOARD_NAME=\"totem white\""]'
